@@ -1,5 +1,36 @@
+.margem-topo{
+  margin-top: 	100px;
+}
+
 .centralizar-texto {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.botao-novo-conselho {
+  background-color: #3498db;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.botao-novo-conselho:hover {
+  background-color: #2980b9;
+}
+
+.botao-novo-conselho:active {
+  background-color: #1f618d;
+}
+
+body {
+  background-color: #ecf0f1;
 }
