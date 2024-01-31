@@ -5,7 +5,7 @@ async function aoClicarOutroConselho(){
   try {
     this.buscarOutroConselho();
   } catch (error) {
-    
+    console.error(error)
   }
 };
 
