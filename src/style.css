@@ -1,11 +1,21 @@
-.margem-topo{
-  margin-top: 	100px;
+body{
+  height: 100vh;
+  margin: 0px;
+  background-color: #ecf0f1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../src/assets/c46db43fbd5cdbe8a6b11a69b65940e4.jpg');
+  /* backdrop-filter: blur(5px); */
 }
 
 .centralizar-texto {
   display: flex;
   justify-content: center;
   align-items: center;
+
+  color: white;
 }
 
 .botao-novo-conselho {
@@ -31,6 +41,10 @@
   background-color: #1f618d;
 }
 
-body {
-  background-color: #ecf0f1;
+.bloco-arredondado{
+  transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
+  border: 5px solid white;
+  border-radius: 10px;
+  padding: 40px;
+  backdrop-filter: blur(15px);
 }

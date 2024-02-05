@@ -16,5 +16,5 @@ async function buscarOutroConselho(){
     .then((resp) => resp.json())
     .then((data) => (conselho = data.slip.advice));
 
-    elementoTexto.innerHTML = conselho;
+  elementoTexto.innerHTML = conselho;
 }
