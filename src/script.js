@@ -10,11 +10,19 @@ async function aoClicarOutroConselho(){
 };
 
 async function buscarOutroConselho(){
-  let conselho = ""
-
+  const stringVazia = " ";
+  let conselho = stringVazia;
+  elementoTexto.innerHTML = "Loading...";
+  
   await fetch("https://api.adviceslip.com/advice")
-    .then((resp) => resp.json())
-    .then((data) => (conselho = data.slip.advice));
+  .then((resp) => resp.json())
+  .then((data) => (conselho = data.slip.advice));
+  
+  elementoTexto.innerHTML = stringVazia;
+  const words = conselho.split(stringVazia);
+  for (let i = 0; i < words.length; i++) {
+    elementoTexto.innerHTML += ` ${words[i]}`;
 
-  elementoTexto.innerHTML = conselho;
+    await new Promise((resolve) => setTimeout(resolve, 200));
+  }
 }

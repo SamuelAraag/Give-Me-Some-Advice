@@ -1,20 +1,30 @@
-body{
+body {
   height: 100vh;
   margin: 0px;
   background-color: #ecf0f1;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: relative; /* Adicione esta linha */
 
   background-image: url('../src/assets/c46db43fbd5cdbe8a6b11a69b65940e4.jpg');
-  /* backdrop-filter: blur(5px); */
+}
+
+/* Adicione esta parte */
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Ajuste o valor alfa (0.5) para aumentar ou diminuir a escuridão */
 }
 
 .centralizar-texto {
   display: flex;
   justify-content: center;
   align-items: center;
-
   color: white;
 }
 
@@ -41,7 +51,7 @@ body{
   background-color: #1f618d;
 }
 
-.bloco-arredondado{
+.bloco-arredondado {
   transition: width 0.3s ease, height 0.3s ease, padding 0.3s ease;
   border: 5px solid white;
   border-radius: 10px;
