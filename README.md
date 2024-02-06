@@ -1,3 +1,4 @@
-# Give-Me-Some-Advice
+# Give Me Some Advice
 
-<img src="https://raw.githubusercontent.com/SamuelAraag/Give-Me-Some-Advice/main/src/assets/give-me-some-advice.png"></img>
+<a target="_blank" href="https://samuelaraag.github.io/Give-Me-Some-Advice/">Link para acessar</a>
+<img src="https://raw.githubusercontent.com/SamuelAraag/Give-Me-Some-Advice/main/assets/give-me-some-advice.png"></img>
