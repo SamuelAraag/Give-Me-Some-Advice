@@ -1,27 +1,27 @@
-let elementoTexto = document.getElementById("conselhoConteudo");
+let textElement = document.getElementById("adviceContent");
 
-aoClicarOutroConselho();
-async function aoClicarOutroConselho(){
+onButtonClick();
+async function onButtonClick() {
   try {
-    this.buscarOutroConselho();
+    await fetchAnotherAdvice();
   } catch (error) {
-    console.error(error)
+    console.error(error);
   }
-};
+}
 
-async function buscarOutroConselho(){
-  const stringVazia = " ";
-  let conselho = stringVazia;
-  elementoTexto.innerHTML = "Loading...";
-  
+async function fetchAnotherAdvice() {
+  const emptyString = " ";
+  let advice = emptyString;
+  textElement.innerHTML = "Loading...";
+
   await fetch("https://api.adviceslip.com/advice")
-  .then((resp) => resp.json())
-  .then((data) => (conselho = data.slip.advice));
-  
-  elementoTexto.innerHTML = stringVazia;
-  const words = conselho.split(stringVazia);
+    .then((resp) => resp.json())
+    .then((data) => (advice = data.slip.advice));
+
+  textElement.innerHTML = emptyString;
+  const words = advice.split(emptyString);
   for (let i = 0; i < words.length; i++) {
-    elementoTexto.innerHTML += ` ${words[i]}`;
+    textElement.innerHTML += ` ${words[i]}`;
 
     await new Promise((resolve) => setTimeout(resolve, 200));
   }
